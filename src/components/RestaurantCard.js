@@ -22,6 +22,21 @@ const RestaurantCard =(props)=>{
         </div>
     );
 };
+{/*
+    With this feature we were implementing the Higher order component but swiggy now has removed the promoted label tag so we will not do this
+export const withPromotedLabel =(RestaurantCard)=>{
+    return (props)=>{
+        return (
+            <div>
+                <label>Promoted</label>
+                <RestaurantCard {...props}/>
+            </div>
+        );
+    };
+};
+*/}
+
+
 
 export default RestaurantCard;
 

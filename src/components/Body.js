@@ -5,11 +5,17 @@ import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnlineStatus";
 
 const Body = ()=>{
-    // Local State Variable
+    // Local State Variable- Super powerful variable
     const [ListOfRestaurants, setListOfRestaurants]= useState([]);
-    const [searchText, setsearchText]= useState("");
     const [filteredRestaurant, setfilteredRestaurant]= useState([]);
+    const [searchText, setsearchText]= useState("");
 
+    {/*as swiggy removed the promoted label tag
+        const RestaurantCardPromoted= withPromotedLabel(RestaurantCard);
+        console.log("Body", ListOfRestaurants)
+    */}
+
+   
     // console.log("The whole body is rerendering ever you type c a f e,it will render 4 time")
     
     useEffect(()=>{
@@ -19,6 +25,8 @@ const Body = ()=>{
     const fetchData = async ()=>{
         const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json= await data.json();
+
+      
 
         console.log(json);
         //Optional Chaining
@@ -78,7 +86,17 @@ const Body = ()=>{
               {filteredRestaurant.map((restaurant) => (
                 <Link key={restaurant.info.id} to={"/restaurants/"+ restaurant.info.id}
                 >
-                    <RestaurantCard resData={restaurant}/>
+                    <RestaurantCard resData={restaurant}/> 
+
+                    {/* as swiggy removed the promoted label tag so we cant do this
+                    {restaurant.data.promoted ? (<RestaurantCardPromoted resData={restaurant}/>)
+                    : (
+                    <RestaurantCard resData={restaurant}/> 
+                    )}
+
+                    */}
+
+                    
                 </Link>
                 ))}
         
