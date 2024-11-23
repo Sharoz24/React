@@ -28,7 +28,7 @@ const Body = ()=>{
 
       
 
-        console.log(json);
+        //console.log(json);
         //Optional Chaining
         setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setfilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -79,6 +79,8 @@ const Body = ()=>{
                         Top Rated Restaurant
                     </button>
                 </div>
+
+                
 
                
             </div>

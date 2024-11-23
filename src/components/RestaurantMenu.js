@@ -10,6 +10,9 @@ import { useState } from "react";
 const RestaurantMenu = () => {
     const { resId } = useParams();
 
+    //we just built dummy to show the prop  drilling concept and it has no use other than it
+    const dummy = "Dummy data"
+
     const resInfo= useRestaurantMenu(resId);
 
     const [showIndex, setShowIndex]= useState(null);
@@ -46,6 +49,7 @@ const RestaurantMenu = () => {
                 data={category?.card?.card}
                 showItems={index === showIndex ? true:false}
                 setShowIndex={()=> setShowIndex(index)}
+                dummy={dummy}
                 /> 
 
             ))}

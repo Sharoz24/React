@@ -11,7 +11,6 @@ const User=(props)=>{
             <h2>Name: {props.name}</h2>
             <h2>Location: Dehradun</h2>
             <h2>Contact: @khan_sharoz21_</h2>
-
         </div>
     );
 }; 
