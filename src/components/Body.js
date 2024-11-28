@@ -76,7 +76,6 @@ const Body = ()=>{
                         );
                         setListOfRestaurants(FilteredList);
                     }}
-                    
                     >
                         Top Rated Restaurant
                     </button>
@@ -89,9 +88,6 @@ const Body = ()=>{
                     onChange={(e)=>setUserName(e.target.value)}
                     />
                 </div>
-
-                
-
                
             </div>
             <div className="flex flex-wrap">
