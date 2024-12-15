@@ -18,7 +18,7 @@ class UserClass extends React.Component{
         console.log(this.props.name + "Child component Did Mount");
         // API call
 
-        const data= await fetch("https://api.github.com/users/akshaymarch7")
+        const data= await fetch("https://api.github.com/users/sharoz24")
         const json= await data.json();
    
 
@@ -30,7 +30,7 @@ class UserClass extends React.Component{
     } 
 
     componentDidUpdate(){
-        console.log("COmponent Did Update")
+        console.log("Component Did Update")
     }
 
     componentWillUnmount(){
@@ -40,13 +40,12 @@ class UserClass extends React.Component{
     render(){
         console.log(this.props.name + "Child render")  
         const {name, location, avatar_url} = this.state.userInfo;
-        debugger;
         return (
             <div className="user-card">
-                <h2>Name: {name}</h2>
+                {/* <h2>Name: {name}</h2> */}
                 <h2>Location: {location}</h2>                
                 <img src={avatar_url}></img>
-                <h2>Contact: @aksharmarch7</h2>
+                <h2>Contact: @sharoz24</h2>
             </div>
         );
     };

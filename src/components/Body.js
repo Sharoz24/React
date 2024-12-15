@@ -47,7 +47,12 @@ const Body = ()=>{
 
     const {loggedInUser, setUserName} = useContext(UserContext);
 
-    return ListOfRestaurants.length === 0 ? ( <Shimmer />) : (
+    if (ListOfRestaurants.length ===0){
+        return <Shimmer/>;
+    };
+
+    
+    return (
         <div className="body">
             <div className="filter flex">
                 <div className="search m-4 p-4">

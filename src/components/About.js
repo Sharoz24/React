@@ -5,7 +5,7 @@ import React from "react";
 import UserContext from "../utils/UserContext";
 
 
-//About class  component
+
 class About extends React.Component{
     constructor(props){
         super(props)
@@ -20,7 +20,7 @@ class About extends React.Component{
         //console.log("Parent Render")
       return (
         <div>
-          <h1>About class component</h1>
+          {/* <h1>About class component</h1> */}
           <div>
             Logged In User
             <UserContext.Consumer>
@@ -29,7 +29,7 @@ class About extends React.Component{
                 }
             </UserContext.Consumer>
           </div>
-          <h2>This is the namaste react web series</h2>
+          {/* <h2>This is the Namaste React web series</h2> */}
           <UserClass name={'First '} location={'Dehradun (class)'}/>
         </div>
       )
