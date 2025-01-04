@@ -47,8 +47,16 @@ const Body = ()=>{
 
     const {loggedInUser, setUserName} = useContext(UserContext);
 
+    console.log("GKgkashsh", ListOfRestaurants.length)
     if (ListOfRestaurants.length ===0){
-        return <Shimmer/>;
+
+        return (
+            <div className="flex flex-wrap">
+                {Array.from({length:10}).map((val, i)=>(
+                <Shimmer key={i}/>
+            ))}
+            </div>
+        );
     };
 
     
